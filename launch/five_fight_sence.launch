@@ -1,0 +1,23 @@
+<launch>
+
+    <arg name="length" default="1.5" />
+    <arg name="hight" default="1.75" />
+    <arg name="row_lenght" default="2.5" />
+
+    <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles0" args="1.5 2 0.01
+    0 0 1.0 
+    0 0 0 world floor false" output="screen" />
+
+    <!--两根柱子-->
+    <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles1" args="0.04 0.04 $(arg length)
+    -0.75 -1 $(arg hight)
+    0 0 0 world pillars0 false" output="screen" />
+
+    <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles2" args="0.04 0.04 $(arg length)
+    -0.75 1 $(arg hight)
+    0 0 0 world pillars1 false" output="screen" />
+    <!--横杆-->
+    <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles3" args="0.04 2 0.04
+    -0.75 0 $(arg row_lenght)
+    0 0 0 world cross_bar false" output="screen" />
+</launch>
