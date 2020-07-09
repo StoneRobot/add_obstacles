@@ -20,4 +20,17 @@
     <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles3" args="0.04 2 0.04
     -0.75 0 $(arg row_lenght)
     0 0 0 world cross_bar false" output="screen" />
+
+    <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles4" args="0.03 0.03 0.1
+    0 -0.5 1.05
+    0 0 0 world toy0 false" output="screen" />
+
+    <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles5" args="0.03 0.03 0.1
+    0.1 -0.5 1.05
+    0 0 0 world toy1 false" output="screen" />
+
+    <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles6" args="0.03 0.03 0.1
+    0.2 -0.5 1.05
+    0 0 0 world toy2 false" output="screen" />
+
 </launch>
