@@ -8,6 +8,10 @@
     0 0 1.0 
     0 0 0 world floor false" output="screen" />
 
+    <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles6" args="1.5 2 0.01
+    0 0 1.98
+    0 0 0 world ceiling false" output="screen" />
+
     <!--两根柱子-->
     <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles1" args="0.04 0.04 $(arg length)
     -0.75 -1 $(arg hight)
@@ -20,4 +24,12 @@
     <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles3" args="0.04 2 0.04
     -0.75 0 $(arg row_lenght)
     0 0 0 world cross_bar false" output="screen" />
+    <!-- 前墙 -->
+    <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles4" args="0.01 2 1.5
+    1 0 $(arg hight)
+    0 0 0 world Qian_wall true" output="screen" />
+    <!-- 侧墙 -->
+    <node pkg="add_obstacles" type="add_obstacles" name="add_obstacles5" args="1.5 0.01 $(arg length)
+    0 -0.5 $(arg hight)
+    0 0 0 world left_wall false" output="screen" />
 </launch>
